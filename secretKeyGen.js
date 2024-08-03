@@ -1,4 +1,5 @@
 let secretKey;
+let num='';
 function generateSecretKey(){
 secretKey=Math.round(Math.random()*1000000).toString();
 //console.log(secretKey);
@@ -9,19 +10,22 @@ else{ return generateSecretKey();}
 }
 document.getElementById("secret-key-generator").addEventListener('click',function(){
 secretKey=generateSecretKey();
-console.log(secretKey);
+//console.log(secretKey);
 document.getElementById("secret-key-space").innerText=secretKey;
 })
-let num='';
+
 function show(a){
+    if(num.length<6){
     if(a=='c')num='';
     else if (a=='x'){
         num=num.slice(0,num.length-1);
     }
     else num=num+a;
-    console.log(num);
-    console.log('length:'+ num.length);
-document.getElementById("input-pin").innerText=num;
+    //console.log(num);
+    //console.log('length:'+ num.length);
+    document.getElementById("input-pin").innerText=num;
+}
+else return 0;
 }
 function verify(){
     if(secretKey==num) document.getElementById('message').innerHTML='<p>&#9989; Success!!</p>';
