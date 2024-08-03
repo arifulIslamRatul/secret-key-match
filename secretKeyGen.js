@@ -15,18 +15,15 @@ document.getElementById("secret-key-space").innerText=secretKey;
 })
 
 function show(a){
-    if(num.length<6){
+
     if(a=='c')num='';
     else if (a=='x'){
         num=num.slice(0,num.length-1);
     }
-    else num=num+a;
-    //console.log(num);
-    //console.log('length:'+ num.length);
+    else if(num.length<6) num=num+a;
     document.getElementById("input-pin").innerText=num;
 }
-else return 0;
-}
+
 function verify(){
     if(secretKey==num) document.getElementById('message').innerHTML='<p>&#9989; Success!!</p>';
     else document.getElementById('message').innerHTML='<p>&#10060; Pin not matched !!</p>'
