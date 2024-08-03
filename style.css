@@ -26,15 +26,8 @@
  margin: 10px;
 }
 
-/*S.mid-container{
-    height: auto;
-    width:5px;
-    margin:5px;
-    background-color: white;
-}*/
 .right-container{
     margin: 10px; 
-    /*background-color: darkcyan;*/
 }
 
 .pin-container{
@@ -50,7 +43,6 @@
     background-color:cadetblue;
     border: solid black;
     border-radius: 4px;
-    text-align: center;
 }
 .key-container{
     display: grid;
