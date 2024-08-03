@@ -14,6 +14,8 @@
     margin: 100px auto;
     
     
+    
+    
 }
 .sec-key-gen{
     height: auto;
@@ -43,11 +45,17 @@
     background-color:cadetblue;
     border: solid black;
     border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .key-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
+}
+#message{
+    align-items: center;
 }
 .common{
     background-color:cadetblue ;
@@ -82,7 +90,7 @@ h3{
     }
     }
 
-@media only screen and (max-width:400px){
+@media only screen and (max-width:430px){
 .container{
     grid-template-columns: 1fr;
 }  
